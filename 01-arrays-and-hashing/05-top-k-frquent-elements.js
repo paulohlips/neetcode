@@ -14,8 +14,6 @@ const topKFrequent = (nums, k) => {
     map[nums[i]] = map[nums[i]] + 1;
   }
 
-  const values = Object.entries(map).sort();
-  console.log(values);
   const values = Object.entries(map).sort((a, b) => b[1] - a[1]);
   const result = [];
   for (let j = 0; j < k; j++) {
